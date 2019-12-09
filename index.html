@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Javascript 30 | Wes Bos' | Episode 19" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Webcam Fun!</title>
+  </head>
+  <body>
+    <div class="all">
+      <div class="configs">
+        <button class="take-photo">Take Photo</button>
+        <div class="ranges">
+          <label for="RMin">Red Min</label>
+          <input
+            type="range"
+            name="RMin"
+            min="0"
+            max="255"
+            id="RMin"
+            value="255"
+          />
+          <label for="RMax">Red Max</label>
+          <input
+            type="range"
+            name="RMax"
+            min="0"
+            max="255"
+            id="RMax"
+            value="0"
+          />
+
+          <br />
+
+          <label for="GMin">Green Min</label>
+          <input
+            type="range"
+            name="GMin"
+            min="0"
+            max="255"
+            id="GMin"
+            value="255"
+          />
+          <label for="GMax">Green Max</label>
+          <input
+            type="range"
+            name="GMax"
+            min="0"
+            max="255"
+            id="GMax"
+            value="0"
+          />
+
+          <br />
+
+          <label for="BMin">Blue Min</label>
+          <input
+            type="range"
+            name="BMin"
+            min="0"
+            max="255"
+            id="BMin"
+            value="255"
+          />
+          <label for="BMax">Blue Max</label>
+          <input
+            type="range"
+            name="BMax"
+            min="0"
+            max="255"
+            id="BMax"
+            value="0"
+          />
+        </div>
+      </div>
+      <div class="filters">
+        <div class="radio">
+          <label for="red-filter">Red Filter</label>
+          <input type="radio" name="filter" id="red-filter" />
+        </div>
+        <div class="radio">
+          <label for="blue-filter">Blue Filter</label>
+          <input type="radio" name="filter" id="blue-filter" />
+        </div>
+        <div class="radio">
+          <label for="green-filter">Green Filter</label>
+          <input type="radio" name="filter" id="green-filter" />
+        </div>
+        <div class="radio">
+          <label for="rgb-filter">RGB Split Filter</label>
+          <input type="radio" name="filter" id="rgb-filter" />
+        </div>
+        <div class="radio">
+          <label for="no-filter">No Filter</label>
+          <input type="radio" name="filter" id="no-filter" />
+        </div>
+        <div class="toggle">
+          <label for="slow-mo-filter">Slow-Mo Filter</label>
+          <div class="slowmo">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+
+      <canvas class="photo"></canvas>
+      <video class="player"></video>
+      <div class="strip"></div>
+    </div>
+
+    <audio src="./snap.wav" class="snap" hidden></audio>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

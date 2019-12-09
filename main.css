@@ -1,0 +1,126 @@
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ff7700;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23cc0000' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23aa0000' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23d6002b' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23b10022' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23d9004b' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23b2003d' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23d3006c' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ac0057' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23c4008c' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%239e0071' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23aa00aa' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23880088' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.all {
+  width: 50%;
+  margin: 100px auto;
+  background-color: #f6f6f6;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.filters {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  top: 180px;
+  right: 15px;
+  background-color: #f6f6f6;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.slowmo {
+  background-color: red;
+  width: 40px;
+  height: 15px;
+  border-radius: 10px;
+  padding: 2px 0;
+  transition: background-color .2s linear;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  background-color: #e3e3e3;
+  border-radius: 50%;
+  transform: translateX(3px);
+  cursor: pointer;
+  transition: transform 0.2s linear;
+}
+
+.slowmo.right > .circle {
+  transform: translateX(22px);
+}
+
+.slowmo.right {
+  background-color: green;
+}
+
+.ranges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.ranges > * {
+  width: 30%;
+}
+
+.ranges > label {
+  width: 15%;
+}
+
+.take-photo {
+  background-color: #f6f6f6;
+  border: 1px solid #000000;
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.strip {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  height: 120px;
+  overflow-y: scroll;
+}
+
+.strip > * {
+  width: 20%;
+  margin: 10px;
+}
+
+.strip > * > * {
+  width: 100%;
+  height: auto;
+}
+
+.player {
+  position: absolute;
+  height: 150px;
+  width: auto;
+  top: 15px;
+  right: 15px;
+}
+
+.photo {
+  margin: 20px auto 0;
+  display: block;
+}
